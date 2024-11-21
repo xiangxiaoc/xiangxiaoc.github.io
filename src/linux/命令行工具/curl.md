@@ -1,0 +1,58 @@
+---
+date: 2022-01-09
+category: 命令行工具
+tag:
+  - Linux
+  - 行文本处理
+  - Shell
+---
+
+# curl - 发起 http 请求
+
+## 简介
+
+用法
+
+```shell
+awk [arg] '[condition]{code}' FILE
+cat FILE | awk ... # 管道传递
+```
+参数
+- -F 指定分隔符，例如 -F ','
+- -v 通过 awk 识别的变量指定参数
+  - -v OFS 指定输出的分隔符
+
+
+## awk 代码语法
+```shell
+# 打印第二列为 Stopped 第一列的值
+awk '
+{
+	if ($2 == "Stopped") {
+		print $1
+	}
+}'
+```
+
+## 案例
+### 不打印第一列
+循环打印每列法
+```shell
+awk '{
+  for(col=2;col<=NF;col++)
+  print $col
+}' $filename 
+```
+第一列置空法（主要作用体现在可以将一列中的每个值再次计算）
+```shell
+awk '{
+  $1=""
+  print $0
+}' $filename
+```
+
+## 具体案例
+1. 杀死僵尸进程
+```shell
+ps -A -o stat,ppid,pid,cmd | grep -e '^[Zz]' | awk '{print $2}' | xargs kill -9
+```
