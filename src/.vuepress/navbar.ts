@@ -10,32 +10,32 @@ export default navbar([
     {
         text: "博客文章",
         icon: "file",
-        link: "article/"
+        link: "/article/"
     },
 
     {
-        text: "笔记文档区",
+        text: "笔记文档",
         icon: "book",
         children: [
             {
                 text: "Linux",
                 icon: "/assets/icon/linux.png",
-                link: "linux/"
+                link: "/linux/"
             },
             {
                 text: "CI/CD",
                 icon: "/assets/icon/CICD.png",
-                link: "CICD/"
+                link: "/CICD/"
             },
             {
                 text: "Python",
                 icon: "/assets/icon/python.png",
-                link: "python/"
+                link: "/python/"
             },
             {
                 text: "Golang",
                 icon: "/assets/icon/golang.png",
-                link: "golang/"
+                link: "/golang/"
             },
         ]
     },

@@ -37,7 +37,7 @@ export default hopeTheme({
         由 
         <a href="https://v2.vuepress.vuejs.org/zh/" target="_blank">
             <img alt="" 
-                src="/assets/images/hero.png" 
+                src="/assets/images/vuepress.png" 
                 height="20px" 
                 style="vertical-align: bottom" 
             />VuePress

@@ -21,14 +21,15 @@ Argo CD 是面向 Kubernetes 基于声明式配置的、GitOps 的 持续交付�
 ![应用同步状态，健康状态全览](assets/argocd-1.png)
 
 Argo CD 里的核心对象设计
+
 - Repo: 代码仓库，Git Repo 是其中一种。根据指定的项目某个目录路径，获取目录下 K8s 对象的声明式描述文件 (.yaml)
 - K8s Objects: 包括 Deployment, Service, configMap 所有 K8s 对象，获取 K8s 集群上当前已存在的对象
 - Application: 应用，Repo 和 K8s Objects 是该对象的必需属性，被创建出来即刻 watch 这两个对象
-  - 实时执行 Diff 方法， 如果一致返回 Synced，只要不一致返回 Out of Sync
-  - 可手动或自动执行 sync 方法，将 Repo 描述的对象同步至 K8s 对象
+    - 实时执行 Diff 方法， 如果一致返回 Synced，只要不一致返回 Out of Sync
+    - 可手动或自动执行 sync 方法，将 Repo 描述的对象同步至 K8s 对象
 - Project: Application 不能独立存在，必须归属于一个 Project，而 Project 主要的两个属性：
-  - Roles， 实现 Argo CD 内不同用户的行为权限控制
-  - window， 实现预先配置的定时执行 sync 的功能
+    - Roles， 实现 Argo CD 内不同用户的行为权限控制
+    - window， 实现预先配置的定时执行 sync 的功能
 
 ![Argo CD 核心概念设计](assets/argocd-2.png)
 
