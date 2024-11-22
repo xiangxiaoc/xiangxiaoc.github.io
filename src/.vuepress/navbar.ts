@@ -9,50 +9,37 @@ export default navbar([
 
     {
         text: "博客文章",
-        link: "article/",
-        icon: "book"
+        icon: "file",
+        link: "article/"
     },
+
     {
-        text: "Linux",
-        prefix: "/linux",
-        icon: "/assets/icon/linux.png",
+        text: "笔记文档区",
+        icon: "book",
         children: [
-            "Shell/",
-            "命令行工具/",
-            "应用服务/"
-        ],
-    },
-    {
-        text: "CI/CD",
-        prefix: "/cicd",
-        icon: "/assets/icon/CICD.png",
-        children: [
-            "Jenkins/",
-            "Gitlab CI/",
-            "Argo CD/",
+            {
+                text: "Linux",
+                icon: "/assets/icon/linux.png",
+                link: "linux/"
+            },
+                        {
+                text: "CI/CD",
+                icon: "/assets/icon/CICD.png",
+                link: "cicd/"
+            },
+                        {
+                text: "Python",
+                icon: "/assets/icon/python.png",
+                link: "python/"
+            },
+                        {
+                text: "Golang",
+                icon: "/assets/icon/golang.png",
+                link: "golang/"
+            },
         ]
     },
-    {
-        text: "Python",
-        prefix: "/python",
-        icon: "/assets/icon/python.png",
-        children: [
-            "Django/",
-            "三方库/",
-            "内置库/",
-            "协程/",
-        ],
-    },
-    {
-        text: "Golang",
-        prefix: "/golang",
-        icon: "/assets/icon/golang.png",
-        children: [
-            "三方库/",
-            "代码特性/",
-            "工程化/",
-        ],
-    },
+
     {
         text: "关于",
         icon: "circle-info",

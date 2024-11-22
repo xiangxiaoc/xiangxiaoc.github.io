@@ -10,7 +10,7 @@ title: 主页
 # 设置封面图内主标题，不设置则使用 config.ts title 的值
 heroText: 不积跬步，无以至千里。
 # 首页封面图全屏
-heroFullScreen: false
+heroFullScreen: true
 # 设置封面图内设置副标题
 tagline: '<em style="text-shadow: 2px 2px 4px gray; font-size: 25px">What you earn depends on what you learn.</em>'
 bgImage: assets/images/塞尔达.jpeg
