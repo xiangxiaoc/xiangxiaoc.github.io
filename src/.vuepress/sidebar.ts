@@ -2,7 +2,7 @@ import {sidebar} from "vuepress-theme-hope";
 
 export default sidebar({
     "/linux/": "structure",
-    "/cicd/": "structure",
+    "/CICD/": "structure",
     "/python/": "structure",
     "/golang/": "structure",
     "/posts/": "structure",

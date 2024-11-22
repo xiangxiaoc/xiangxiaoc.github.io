@@ -22,17 +22,17 @@ export default navbar([
                 icon: "/assets/icon/linux.png",
                 link: "linux/"
             },
-                        {
+            {
                 text: "CI/CD",
                 icon: "/assets/icon/CICD.png",
-                link: "cicd/"
+                link: "CICD/"
             },
-                        {
+            {
                 text: "Python",
                 icon: "/assets/icon/python.png",
                 link: "python/"
             },
-                        {
+            {
                 text: "Golang",
                 icon: "/assets/icon/golang.png",
                 link: "golang/"
