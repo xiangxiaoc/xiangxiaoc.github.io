@@ -77,6 +77,12 @@ export default hopeTheme({
 
     // 在这里配置主题提供的插件
     plugins: {
+        docsearch: {
+            appId: "Z93N0GU9QZ",
+            apiKey: "c4eb6de02dab670f7a73469f7f462d16",
+            indexName: "xiangcheng"
+        },
+
         // blog 配置 https://theme-hope.vuejs.press/zh/config/plugins/blog.html#excerptfilter
         blog: {
             // 自动生成摘要
