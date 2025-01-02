@@ -16,26 +16,27 @@ export default navbar([
     {
         text: "笔记文档",
         icon: "book",
+        prefix: "/notes/",
         children: [
             {
                 text: "Linux",
                 icon: "/assets/icon/linux.png",
-                link: "/linux/"
+                link: "linux/"
             },
             {
                 text: "CI/CD",
                 icon: "/assets/icon/CICD.png",
-                link: "/CICD/"
+                link: "CICD/"
             },
             {
                 text: "Python",
                 icon: "/assets/icon/python.png",
-                link: "/python/"
+                link: "python/"
             },
             {
                 text: "Golang",
                 icon: "/assets/icon/golang.png",
-                link: "/golang/"
+                link: "golang/"
             },
         ]
     },

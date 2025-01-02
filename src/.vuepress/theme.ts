@@ -33,21 +33,21 @@ export default hopeTheme({
 
     // 页脚
     footer: `
-        <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备2023000655号</a> | 
-        由 
+        <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备2023000655号</a> |
+        由
         <a href="https://v2.vuepress.vuejs.org/zh/" target="_blank">
-            <img alt="" 
-                src="/assets/images/vuepress.png" 
-                height="20px" 
-                style="vertical-align: bottom" 
+            <img alt=""
+                src="/assets/images/vuepress.png"
+                height="20px"
+                style="vertical-align: bottom"
             />VuePress
-        </a> 驱动 | 
-        主题采用 
+        </a> 驱动 |
+        主题采用
         <a href="https://theme-hope.vuejs.press/zh/" target="_blank" >
-            <img alt="" 
-                src="/logo.svg" 
-                height="20px" 
-                style="vertical-align: bottom" 
+            <img alt=""
+                src="/logo.svg"
+                height="20px"
+                style="vertical-align: bottom"
             />Hope
         </a>`,
     copyright: "Copyright © 2024 大橙",
@@ -59,7 +59,7 @@ export default hopeTheme({
     // 加密配置
     encrypt: {
         config: {
-            "/demo/encrypt.html": ["1234"],
+            // "/demo/encrypt.html": ["1234"],
         },
     },
 

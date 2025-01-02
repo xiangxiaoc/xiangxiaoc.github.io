@@ -5,6 +5,7 @@ import theme from "./theme.js";
 export default defineUserConfig({
   // https://vuepress.vuejs.org/zh/reference/config.html
 
+  // 部署站点的基础路径
   base: "/",
 
   lang: "zh-CN",
