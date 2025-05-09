@@ -46,7 +46,7 @@ html=
 default_html=
 '''
 <p>该分支不支持直接发布，请在构建完成后提交变更请求单</p>
-<a href="http://migujira.cmread.com/secure/CreateIssue!default.jspa" target="_blank" rel="noopener noreferrer">点我提单</a>
+<a href="http://jira.com/secure/CreateIssue!default.jspa" target="_blank" rel="noopener noreferrer">点我提单</a>
 '''
 
 if (branch == "devS") {

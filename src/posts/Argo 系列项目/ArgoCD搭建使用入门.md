@@ -123,7 +123,7 @@ kubectl -n argo-cd edit cm argocd-cm
 apiVersion: v1
 data:
   dex.config: |
-    # cmread gitlab
+    # private gitlab
     connectors:
     - type: gitlab
       id: gitlab
@@ -335,7 +335,7 @@ INFO[0016] ServiceAccount "argocd-manager" created in namespace "kube-system"
 INFO[0016] ClusterRole "argocd-manager-role" created  
 INFO[0016] ClusterRoleBinding "argocd-manager-role-binding" created 
 INFO[0021] Created bearer token secret for ServiceAccount "argocd-manager" 
-Cluster 'https://api.nt-k8s.migu:6443' added
+Cluster 'https://api.k8s.com:6443' added
 ```
 
 # gitlab webhook
