@@ -1,5 +1,2 @@
-
-User-agent:*
-Disallow:
-
+# Algolia-Crawler-Verif: 5E67415DAA54F4EA
 Sitemap: https://xiangcheng.site/sitemap.xml
