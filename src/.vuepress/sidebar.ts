@@ -14,6 +14,7 @@ export default sidebar({
     "/notes/CICD/": "structure",
     "/notes/python/": "structure",
     "/notes/golang/": "structure",
+    "/notes/database/": "structure",
 
     // 其他
     // "/about/": "structure"

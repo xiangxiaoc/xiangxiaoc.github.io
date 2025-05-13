@@ -5,6 +5,7 @@ import sidebar from "./sidebar.js";
 import profile from "./profile.js";
 
 export default hopeTheme({
+    // 当前网站部署到的域名
     hostname: "https://xiangcheng.site",
 
     // 每篇文章显示作者和名字的点击链接
@@ -13,20 +14,16 @@ export default hopeTheme({
     //   url: "https://www.xiangcheng.site",
     // },
 
-    // https://fontawesome.com/ 搜图标名
-    iconAssets: "fontawesome-with-brands",
-
+    /*
+    主题布局选项
+    https://theme-hope.vuejs.press/zh/config/theme/layout.html
+    */
     // 用于导航栏左侧首页小图和博客个人简介照片
     logo: "/orange_590x590.png",
-
-    // 导航栏右侧项目源码仓库
-    // repo: "xiangxiaoc/vuepress-theme-hope",
-
-    // 文档目录，相对于项目根
-    docsDir: "src",
-
     // 导航栏
     navbar,
+    // 导航栏右侧项目源码仓库
+    // repo: "xiangxiaoc/vuepress-theme-hope",
 
     // 侧边栏
     sidebar,
@@ -56,6 +53,10 @@ export default hopeTheme({
     // 个人简介相关
     blog: profile,
 
+
+    lastUpdated: true, // 是否显示页面最后更新时间
+    docsDir: "src", // 文档目录，相对于项目根
+
     // 加密配置
     encrypt: {
         config: {
@@ -75,13 +76,106 @@ export default hopeTheme({
     // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
     // hotReload: true,
 
+    markdown: {
+        // https://theme-hope.vuejs.press/zh/config/markdown/code.html#markdown-demo
+        demo: true,
+        // https://theme-hope.vuejs.press/zh/config/markdown/grammar.html#markdown-tasklist
+        tasklist: {
+            disabled: false
+        },
+        // 通过 component 代码块快速添加组件。https://theme-hope.vuejs.press/zh/guide/component/grammar.html
+        component: true,
+        // https://theme-hope.vuejs.press/zh/config/markdown/behavior.html#markdown-vpre
+        vPre: true,
+        // https://theme-hope.vuejs.press/zh/config/markdown/grammar.html#markdown-include
+        include: true,
+        // https://theme-hope.vuejs.press/zh/config/markdown/stylize.html#markdown-align
+        align: true,
+        // https://theme-hope.vuejs.press/zh/config/markdown/stylize.html#markdown-attrs
+        attrs: true,
+        // https://theme-hope.vuejs.press/zh/config/markdown/stylize.html#markdown-mark
+        mark: true,
+        // https://theme-hope.vuejs.press/zh/config/markdown/stylize.html#markdown-spoiler
+        spoiler: true,
+        // https://theme-hope.vuejs.press/zh/config/markdown/stylize.html#markdown-sup
+        sup: true,
+        // https://theme-hope.vuejs.press/zh/config/markdown/stylize.html#markdown-sub
+        sub: true,
+        // https://theme-hope.vuejs.press/zh/guide/markdown/chart/plantuml.html#%E8%AE%BE%E7%BD%AE
+        plantuml: true,
+        // https://theme-hope.vuejs.press/zh/config/markdown/code.html#markdown-codetabs
+        codeTabs: true,
+        // https://theme-hope.vuejs.press/zh/config/markdown/stylize.html#markdown-stylize
+        stylize: [
+            {
+                matcher: "Recommended",
+                replacer: ({tag}) => {
+                    if (tag === "em")
+                        return {
+                            tag: "Badge",
+                            attrs: {type: "tip"},
+                            content: "Recommended",
+                        };
+                },
+            },
+        ],
+        imgLazyload: true,
+        imgSize: true,
+        figure: true,
+
+        // 在启用之前安装 chart.js
+        // chart: true,
+
+
+        // insert component easily
+
+        // 在启用之前安装 echarts
+        // echarts: true,
+
+        // 在启用之前安装 flowchart.ts
+        // flowchart: true,
+
+        // gfm requires mathjax-full to provide tex support
+        // gfm: true,
+
+        // 在启用之前安装 mermaid
+        // mermaid: true,
+
+        // playground: {
+        //   presets: ["ts", "vue"],
+        // },
+
+        // 在启用之前安装 @vue/repl
+        // vuePlayground: true,
+
+        // install sandpack-vue3 before enabling it
+        // sandpack: true,
+    },
     // 在这里配置主题提供的插件
     plugins: {
         docsearch: {
-            appId: "Z93N0GU9QZ",
-            apiKey: "c4eb6de02dab670f7a73469f7f462d16",
-            indexName: "xiangcheng"
+            /*
+            npx create-instantsearch-app@latest instantsearch-app \
+              --name 'instantsearch-app' \
+              --template 'InstantSearch.js' \
+              --app-id 'O6UXOXHGTM' \
+              --api-key '1699595f4707927465c9b9537cb0a62a' \
+              --index-name 'xiangcheng_site_o6uxoxhgtm_pages' \
+              --attributes-to-display 'title,description,keywords' \
+              --no-interactive \
+              --image-attribute 'image'
+             */
+            appId: "O6UXOXHGTM",
+            apiKey: "1699595f4707927465c9b9537cb0a62a",
+            indexName: "xiangcheng_site_o6uxoxhgtm_pages"
         },
+
+        icon: {
+            // 关键词: "iconify", "fontawesome", "fontawesome-with-brands"
+            // https://fontawesome.com/ 搜图标名
+            assets: "fontawesome-with-brands",
+        },
+
 
         // blog 配置 https://theme-hope.vuejs.press/zh/config/plugins/blog.html#excerptfilter
         blog: {
@@ -115,78 +209,12 @@ export default hopeTheme({
             ],
         },
 
-        // 此处开启了很多功能用于演示，你应仅保留用到的功能。
-        markdownImage: {
-            figure: true,
-            lazyload: true,
-            size: true,
-        },
-
         // markdownMath: {
         //   // 启用前安装 katex
         //   type: "katex",
         //   // 或者安装 mathjax-full
         //   type: "mathjax",
         // },
-
-        // 此功能被开启用于演示，你应仅当使用时保留。
-        markdownTab: true,
-
-        // 此处开启了很多功能用于演示，你应仅保留用到的功能。
-        mdEnhance: {
-            align: true,
-            attrs: true,
-            component: true,
-            demo: true,
-            include: true,
-            mark: true,
-            plantuml: true,
-            spoiler: true,
-            stylize: [
-                {
-                    matcher: "Recommended",
-                    replacer: ({tag}) => {
-                        if (tag === "em")
-                            return {
-                                tag: "Badge",
-                                attrs: {type: "tip"},
-                                content: "Recommended",
-                            };
-                    },
-                },
-            ],
-            sub: true,
-            sup: true,
-            tasklist: true,
-            vPre: true,
-
-            // 在启用之前安装 chart.js
-            // chart: true,
-
-            // insert component easily
-
-            // 在启用之前安装 echarts
-            // echarts: true,
-
-            // 在启用之前安装 flowchart.ts
-            // flowchart: true,
-
-            // gfm requires mathjax-full to provide tex support
-            // gfm: true,
-
-            // 在启用之前安装 mermaid
-            // mermaid: true,
-
-            // playground: {
-            //   presets: ["ts", "vue"],
-            // },
-
-            // 在启用之前安装 @vue/repl
-            // vuePlayground: true,
-
-            // install sandpack-vue3 before enabling it
-            // sandpack: true,
-        },
 
         // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
         // pwa: {
@@ -250,7 +278,18 @@ export default hopeTheme({
         //   plugins: ["highlight", "math", "search", "notes", "zoom"],
         // },
     },
-
-    // 夜间模式
+    /*
+    主题外观选项
+    https://theme-hope.vuejs.press/zh/config/theme/appearance.html#pure
+    */
     darkmode: "toggle",
+    externalLinkIcon: true,
+    fullscreen: true,
+    print: true,
+}, {
+    // https://theme-hope.vuejs.press/zh/config/theme/behavior.html
+    check: true,
+    compact: true,
+    debug: false,
+    checkVuePress: true,
 });

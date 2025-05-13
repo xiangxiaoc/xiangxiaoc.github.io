@@ -38,6 +38,11 @@ export default navbar([
                 icon: "/assets/icon/golang.png",
                 link: "golang/"
             },
+            {
+                text: "数据库",
+                icon: "/assets/icon/database.png",
+                link: "database/"
+            },
         ]
     },
 
