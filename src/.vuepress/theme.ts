@@ -153,8 +153,11 @@ export default hopeTheme({
     },
     // 在这里配置主题提供的插件
     plugins: {
+        // 文档搜索功能插件
         docsearch: {
             /*
+            https://dashboard.algolia.com/apps/O6UXOXHGTM/analytics/overview/xiangcheng_site_o6uxoxhgtm_pages?from=2025-05-06&to=2025-05-12
+            https://crawler.algolia.com/admin/crawlers/ee85952a-3ad2-4517-a6fe-c1460f18e24c/overview
             npx create-instantsearch-app@latest instantsearch-app \
               --name 'instantsearch-app' \
               --template 'InstantSearch.js' \
@@ -282,7 +285,7 @@ export default hopeTheme({
     主题外观选项
     https://theme-hope.vuejs.press/zh/config/theme/appearance.html#pure
     */
-    darkmode: "toggle",
+    darkmode: "switch",
     externalLinkIcon: true,
     fullscreen: true,
     print: true,
