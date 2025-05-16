@@ -119,8 +119,12 @@ export default hopeTheme({
                 },
             },
         ],
+        // 启用图片懒加载
         imgLazyload: true,
+        // 启用图片大小
         imgSize: true,
+        // 启用图片标记
+        imgMark: true,
         figure: true,
 
         // 在启用之前安装 chart.js
@@ -176,7 +180,7 @@ export default hopeTheme({
         icon: {
             // 关键词: "iconify", "fontawesome", "fontawesome-with-brands"
             // https://fontawesome.com/ 搜图标名
-            assets: "fontawesome-with-brands",
+            assets: "fontawesome",
         },
 
 
@@ -287,8 +291,12 @@ export default hopeTheme({
     */
     darkmode: "switch",
     externalLinkIcon: true,
+    // 全屏按钮
     fullscreen: true,
-    print: true,
+    // 打印按钮 https://theme-hope.vuejs.press/zh/guide/interface/others.html#%E6%89%93%E5%8D%B0%E6%8C%89%E9%92%AE
+    print: false,
+    // 专注模式，非文档区域虚化
+    focus: false,
 }, {
     // https://theme-hope.vuejs.press/zh/config/theme/behavior.html
     check: true,

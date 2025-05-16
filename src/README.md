@@ -25,32 +25,17 @@ projects:
   - name: nvidia-docker 开发套装
     desc: 脚本离线安装支持 NVIDIA GPU 的 Docker 套装
     link: https://github.com/xiangxiaoc/docker-ce_docker-compose_nvidia-docker2
-    icon: article
+    icon: lightbulb
 
   - name: docker-compose 编排整合
     desc: 通过 docker-compose 快速部署容器化服务
     link: https://github.com/xiangxiaoc/docker-apps
-    icon: article
+    icon: file
 
   - name: k8s_ansible
     desc: ansible 部署 kubernetes 集群
     link: https://github.com/xiangxiaoc/kubernetes_ansible
-    icon: article
-
-    #  - icon: article
-    #    name: 文章名称
-    #    desc: 文章详细描述
-    #    link: https://你的文章链接
-    #
-    #  - icon: friend
-    #    name: 伙伴名称
-    #    desc: 伙伴详细介绍
-    #    link: https://你的伙伴链接
-    #
-    #  - icon: https://theme-hope-assets.vuejs.press/logo.svg
-    #    name: 自定义项目
-    #    desc: 自定义详细介绍
-    #    link: https://你的自定义链接
+    icon: file
 
 # 首页 footer，不设置则使用 config.ts footer 的值
 #footer: <a href="http://beian.miit.gov.cn/">浙ICP备2023000655号</a>
