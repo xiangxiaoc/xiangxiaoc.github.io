@@ -43,6 +43,11 @@ export default navbar([
                 icon: "/assets/icon/database.png",
                 link: "database/"
             },
+            {
+                text: "模版语言",
+                icon: "/assets/icon/template-fill.png",
+                link: "template-language/"
+            },
         ]
     },
 

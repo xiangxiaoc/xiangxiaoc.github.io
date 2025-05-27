@@ -15,6 +15,7 @@ export default sidebar({
     "/notes/python/": "structure",
     "/notes/golang/": "structure",
     "/notes/database/": "structure",
+    "/notes/template-language/": "structure",
 
     // 其他
     // "/about/": "structure"
