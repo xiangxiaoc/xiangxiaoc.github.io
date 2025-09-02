@@ -1,7 +1,7 @@
 ---
 title: 模版语言
 index: false
-icon: /assets/icon/python.png
+icon: /assets/icon/template-fill.png
 pageInfo: false
 ---
 

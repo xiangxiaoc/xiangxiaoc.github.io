@@ -48,6 +48,11 @@ export default navbar([
                 icon: "/assets/icon/template-fill.png",
                 link: "template-language/"
             },
+            {
+                text: "web前端",
+                icon: "/assets/icon/前端.png",
+                link: "webfront/"
+            },
         ]
     },
 

@@ -16,6 +16,7 @@ export default sidebar({
     "/notes/golang/": "structure",
     "/notes/database/": "structure",
     "/notes/template-language/": "structure",
+    "/notes/webfront/": "structure",
 
     // 其他
     // "/about/": "structure"
