@@ -30,6 +30,11 @@ tag:
     {% $key %}: {% $value %}
 {% /foreach %}
 }
+
+{* 多条件 *}
+{% if $num > 100 && $num < 200 %}
+enableLog = True
+{% /if %}
 ```
 
 关于波浪号的深入理解：
