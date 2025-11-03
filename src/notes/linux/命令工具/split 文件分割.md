@@ -1,6 +1,6 @@
 ---
 date: 2022-01-09
-category: 命令行工具
+category: 命令工具
 tag:
   - Linux
   - 大文件处理

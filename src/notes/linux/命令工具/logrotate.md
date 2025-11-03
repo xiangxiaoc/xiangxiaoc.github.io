@@ -1,6 +1,6 @@
 ---
 date: 2025-05-13
-category: 命令行工具
+category: 命令工具
 tag:
   - Linux
   - 日志管理

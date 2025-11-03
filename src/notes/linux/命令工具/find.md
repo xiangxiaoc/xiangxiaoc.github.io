@@ -1,6 +1,6 @@
 ---
 date: 2022-01-09
-category: 命令行工具
+category: 命令工具
 tag:
   - Linux
   - 日常命令
@@ -40,7 +40,7 @@ find 待搜索的路径 寻找条件 操作
 # 找到当前目录下十天前的文件并删除它们
 find . -mtime +10 -name "*.*" -exec rm -rvf {} \;
 # 查找不属于root用户的文件
-find / ! -user root 
+find / ! -user root
 # 查找包含 password 字符串的文本文件
 find / -type f -exec grep -n password {} \; -print
 ```

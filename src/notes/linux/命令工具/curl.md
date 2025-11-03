@@ -1,6 +1,6 @@
 ---
 date: 2022-01-09
-category: 命令行工具
+category: 命令工具
 tag:
   - Linux
   - 行文本处理
@@ -41,7 +41,7 @@ awk '
 awk '{
   for(col=2;col<=NF;col++)
   print $col
-}' $filename 
+}' $filename
 ```
 第一列置空法（主要作用体现在可以将一列中的每个值再次计算）
 ```shell
