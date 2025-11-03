@@ -23,6 +23,19 @@ tag:
 - apt-get -purge remove PACKAGE 卸载软件包括其配置
 - apt-get source PACKAGE 下载软件包源代码
 
+### 常见问题
+
+apt update 报 GPG Key 错误
+```
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://repo.mysql.com/apt/ubuntu focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY B7B3B788A8D3785C
+W: Failed to fetch http://repo.mysql.com/apt/ubuntu/dists/focal/InRelease The following signatures couldn't be verified because the public key is not available: NO_PUBKEY B7B3B788A8D3785C
+W: Some index files failed to download. They have been ignored, or old ones used instead
+```
+运行命令添加 key
+```shell
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
+```
+
 ## apt-cache
 
 - apt-cache search PACKAGE 查找包含部分关键字的软件包
