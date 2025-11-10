@@ -54,3 +54,16 @@ if 和 /if 左边有4个空格，如果不加 ~ , for循环会把四个空格都
 {* 必须括号括起来，不然不会格式化 *}
 {% ($var/1024)|string_format:".2f" %}
 ```
+
+生成json
+
+巧用 {% if not $item@last %},{% /if %} 每项key后加逗号，最后一项不加
+```
+{
+{% foreach $data as $item %}
+  "{% $item.name %}": "{% $item.value %}"{% if not $item@last %},{% /if %}
+
+{% /foreach %}
+}
+
+```
