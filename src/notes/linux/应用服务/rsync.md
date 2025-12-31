@@ -2,8 +2,8 @@
 date: 2025-05-13
 category: 应用服务
 tag:
-  - Linux
-  - 文件管理
+  + Linux
+  + 文件管理
 ---
 
 # rsync - 文件同步服务
@@ -16,15 +16,18 @@ Bsystemd unit 名称： rsync.service
   systemctl status rsync.service
 ```
 
-- 默认主配置文件： /etc/rsyncd.conf
-- 默认端口：873
+* 默认主配置文件： /etc/rsyncd.conf
+* 默认端口：873
 
 ## 配置示例
 
-```text
-log file = /var/log/rsyncd.log
-pid file = /var/run/rsyncd.pid
-lock file = /var/run/rsyncd.lock
+```ini
+# uid = rsync
+# gid = rsync
+# port = 873
+log file = /var/log/rsyncd.log   # 日志文件
+pid file = /var/run/rsyncd.pid   # pid文件路径
+lock file = /var/run/rsyncd.lock # 锁文件
 #secrets file = /etc/rsync.scr
 syslog facility = local5
 list = false
@@ -41,7 +44,20 @@ comment = xx机器数据目录
 # use chroot
 ```
 
-- rsync 的设计是多模块设计，一个模块对应服务器上的一个目录
+* rsync 的设计是多模块设计，一个模块对应服务器上的一个目录
 
-## 查看日志
+## 重启服务生效
+
+```
+systemctl restart rsync.service
+```
+
+## 客户端命令
+
+```bash
+rsync -avz --progress --delete /home/data/ 192.168.0.10::data
+```
+
+## 服务端查看日志
+
 tail -f /var/log/rsyncd.log
