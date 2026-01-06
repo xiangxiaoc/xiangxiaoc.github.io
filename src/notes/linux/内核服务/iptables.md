@@ -50,7 +50,7 @@ OUTPUT (raw→mangle→nat→filter) → POSTROUTING (mangle→nat)
 
 ```shell
 # 默认操作的是 INPUT 链
-iptables -L -n -v  # 不加表默认就是查看filter表规则
+iptables -L -n -v  # 不加 -t 参数，默认就是查看filter表的规则
 iptables -t nat -L -n -v  # 查看nat表规则
 ```
 
@@ -58,10 +58,12 @@ iptables -t nat -L -n -v  # 查看nat表规则
 
 ```shell
 # 允许来自192.168.1.100的所有连接
-iptables -A INPUT -s 192.168.1.100 -j ACCEPT
+iptables -I INPUT -s 192.168.1.100 -j ACCEPT
+# 删除这条规则
+iptables -D INPUT -s 192.168.1.100 -j ACCEPT
 
 # 阻止来自10.0.0.5的所有连接
-iptables -A INPUT -s 10.0.0.5 -j DROP
+iptables -I INPUT -s 10.0.0.5 -j DROP
 ```
 
 ### 允许特定端口
