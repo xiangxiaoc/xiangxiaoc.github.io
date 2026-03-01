@@ -7,7 +7,7 @@ tag:
 
 # 常用SQL
 
-```mysql
+```sql
 -- 查看每个数据库的大小
 SELECT 
     table_schema AS '数据库',
