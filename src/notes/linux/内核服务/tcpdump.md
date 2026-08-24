@@ -14,4 +14,11 @@ tag:
 # -nn 保留端口数字，不需要解析成服务名例如 80 -> http 22 -> ssh
 # -q 精简输出，只显示 ip 端口，和协议
 tcpdump -i any -nnq port 80
+
+# 限定主机
+tcpdump host 192.168.0.1
+tcpdump dst host 192.168.0.1
+tcpdump src host 192.168.0.1
+tcpdump src host 192.168.0.1 and dst host 192.168.0.2
+
 ```
