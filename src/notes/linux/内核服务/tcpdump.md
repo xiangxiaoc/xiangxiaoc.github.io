@@ -15,10 +15,10 @@ tag:
 # -q 精简输出，只显示 ip 端口，和协议
 tcpdump -i any -nnq port 80
 
-# 限定主机
-tcpdump host 192.168.0.1
-tcpdump dst host 192.168.0.1
-tcpdump src host 192.168.0.1
-tcpdump src host 192.168.0.1 and dst host 192.168.0.2
-
+# 限定主机和端口
+tcpdump host 10.0.0.1
+tcpdump dst host 10.0.0.1
+tcpdump src host 10.0.0.1
+tcpdump src host 10.0.0.1 and dst host 10.0.0.2
+tcpdump src host 10.0.0.1 and not dst port 22
 ```
